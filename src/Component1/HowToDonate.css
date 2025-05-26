@@ -1,0 +1,648 @@
+/* ====== Main Section Styling ====== */
+.donate-section {
+  background: linear-gradient(135deg, #f2f6fc 0%, #e8f1fa 100%);
+  padding: 80px 20px;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.donate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ====== Header Styling ====== */
+.donate-header {
+  margin-bottom: 60px;
+}
+
+.donate-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a365d;
+  letter-spacing: -0.5px;
+}
+
+.donate-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #4a5568;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ====== 2x2 Grid Layout - ALWAYS 2 CARDS PER ROW ====== */
+.donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  padding: 0;
+}
+
+/* ====== Card Styling ====== */
+.donate-card {
+  background: #ffffff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.donate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f7941d, #ff6b35);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.donate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.donate-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.donate-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a365d;
+  line-height: 1.3;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.6;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ====== Button Styling ====== */
+.donate-button-container {
+  margin-top: 40px;
+}
+
+.donate-button {
+  background: linear-gradient(135deg, #f7941d 0%, #ff6b35 100%);
+  color: white;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 148, 29, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.donate-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.donate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(247, 148, 29, 0.4);
+}
+
+.donate-button:hover::before {
+  left: 100%;
+}
+
+.donate-button:active {
+  transform: translateY(0);
+}
+
+/* ====== Corner Image ====== */
+.corner-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.corner-image:hover {
+  opacity: 1;
+}
+
+/* ====== Large Desktop (1200px+) ====== */
+@media (min-width: 1200px) {
+  .donate-section {
+    padding: 100px 40px;
+  }
+  
+  .donate-header h2 {
+    font-size: 48px;
+  }
+  
+  .donate-header p {
+    font-size: 18px;
+  }
+  
+  .donate-grid {
+    gap: 40px;
+    max-width: 1100px;
+  }
+  
+  .donate-card {
+    padding: 40px 32px;
+    min-height: 360px;
+  }
+  
+  .card-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card-text {
+    font-size: 15px;
+  }
+}
+
+/* ====== Desktop (992px - 1199px) ====== */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .donate-section {
+    padding: 80px 30px;
+  }
+  
+  .donate-header h2 {
+    font-size: 38px;
+  }
+  
+  .donate-header p {
+    font-size: 16px;
+  }
+  
+  .donate-grid {
+    gap: 28px;
+    max-width: 900px;
+  }
+  
+  .donate-card {
+    padding: 28px 20px;
+    min-height: 300px;
+  }
+  
+  .card-icon {
+    font-size: 50px;
+    margin-bottom: 18px;
+  }
+  
+  .card-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+  
+  .card-text {
+    font-size: 13px;
+  }
+}
+
+/* ====== Tablet (768px - 991px) ====== */
+@media (max-width: 991px) and (min-width: 768px) {
+  .donate-section {
+    padding: 60px 25px;
+  }
+  
+  .donate-header h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .donate-header p {
+    font-size: 15px;
+    max-width: 600px;
+  }
+  
+  .donate-grid {
+    gap: 24px;
+    max-width: 700px;
+  }
+  
+  .donate-card {
+    padding: 24px 18px;
+    min-height: 280px;
+  }
+  
+  .card-icon {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .card-text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  .donate-button {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}
+
+/* ====== Mobile Large (481px - 767px) ====== */
+@media (max-width: 767px) and (min-width: 481px) {
+  .donate-section {
+    padding: 50px 20px;
+  }
+  
+  .donate-header {
+    margin-bottom: 40px;
+  }
+  
+  .donate-header h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  
+  .donate-header p {
+    font-size: 14px;
+    max-width: 90%;
+  }
+  
+  .donate-grid {
+    gap: 20px;
+    max-width: 600px;
+  }
+  
+  .donate-card {
+    padding: 20px 16px;
+    min-height: 260px;
+  }
+  
+  .card-icon {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+  
+  .card-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .card-text {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  
+  .donate-button {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+  
+  .corner-image {
+    width: 100px;
+  }
+}
+
+/* ====== Mobile Medium (376px - 480px) ====== */
+@media (max-width: 480px) and (min-width: 376px) {
+  .donate-section {
+    padding: 40px 15px;
+  }
+  
+  .donate-header {
+    margin-bottom: 35px;
+  }
+  
+  .donate-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .donate-header p {
+    font-size: 13px;
+    max-width: 95%;
+  }
+  
+  .donate-grid {
+    gap: 16px;
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  
+  .donate-card {
+    padding: 18px 14px;
+    min-height: 240px;
+    border-radius: 12px;
+  }
+  
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  
+  .card-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  
+  .card-text {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  
+  .donate-button {
+    padding: 11px 24px;
+    font-size: 14px;
+  }
+  
+  .corner-image {
+    width: 80px;
+  }
+}
+
+/* ====== Mobile Small (320px - 375px) ====== */
+@media (max-width: 375px) and (min-width: 320px) {
+  .donate-section {
+    padding: 35px 12px;
+  }
+  
+  .donate-header {
+    margin-bottom: 30px;
+  }
+  
+  .donate-header h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .donate-header p {
+    font-size: 12px;
+    max-width: 95%;
+    line-height: 1.5;
+  }
+  
+  .donate-grid {
+    gap: 14px;
+    max-width: 100%;
+    padding: 0 2px;
+  }
+  
+  .donate-card {
+    padding: 16px 12px;
+    min-height: 220px;
+    border-radius: 10px;
+  }
+  
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 7px;
+    line-height: 1.1;
+  }
+  
+  .card-text {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+  
+  .donate-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .corner-image {
+    width: 70px;
+  }
+}
+
+/* ====== Mobile Tiny (below 320px) ====== */
+@media (max-width: 319px) {
+  .donate-section {
+    padding: 30px 10px;
+  }
+  
+  .donate-header {
+    margin-bottom: 25px;
+  }
+  
+  .donate-header h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .donate-header p {
+    font-size: 11px;
+    max-width: 95%;
+    line-height: 1.4;
+  }
+  
+  .donate-grid {
+    gap: 12px;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .donate-card {
+    padding: 14px 10px;
+    min-height: 200px;
+    border-radius: 8px;
+  }
+  
+  .card-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .card-title {
+    font-size: 12px;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+  
+  .card-text {
+    font-size: 8px;
+    line-height: 1.2;
+  }
+  
+  .donate-button {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+  
+  .corner-image {
+    width: 60px;
+  }
+}
+
+/* ====== Landscape Mobile Optimization ====== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .donate-section {
+    padding: 30px 15px;
+  }
+  
+  .donate-header {
+    margin-bottom: 25px;
+  }
+  
+  .donate-header h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .donate-header p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+  
+  .donate-grid {
+    gap: 16px;
+    max-width: 90%;
+  }
+  
+  .donate-card {
+    padding: 16px 14px;
+    min-height: 180px;
+  }
+  
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .card-text {
+    font-size: 9px;
+    line-height: 1.2;
+  }
+  
+  .donate-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* ====== Ultra Wide Screens (1400px+) ====== */
+@media (min-width: 1400px) {
+  .donate-section {
+    padding: 120px 50px;
+  }
+  
+  .donate-header h2 {
+    font-size: 52px;
+    margin-bottom: 25px;
+  }
+  
+  .donate-header p {
+    font-size: 20px;
+    max-width: 800px;
+  }
+  
+  .donate-grid {
+    gap: 50px;
+    max-width: 1200px;
+  }
+  
+  .donate-card {
+    padding: 50px 40px;
+    min-height: 400px;
+  }
+  
+  .card-icon {
+    font-size: 72px;
+    margin-bottom: 30px;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  
+  .donate-button {
+    padding: 20px 50px;
+    font-size: 20px;
+  }
+}
+
+/* ====== Accessibility & Animation Preferences ====== */
+@media (prefers-reduced-motion: reduce) {
+  .donate-card,
+  .card-icon,
+  .donate-button,
+  .corner-image {
+    transition: none;
+  }
+  
+  .donate-card:hover {
+    transform: none;
+  }
+  
+  .donate-card:hover .card-icon {
+    transform: none;
+  }
+}

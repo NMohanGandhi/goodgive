@@ -1,0 +1,432 @@
+/* Impact Section Styling */
+.impact-section {
+  background-color: #1e4d65;
+  background-image: url('../assets/WaveBG.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 25px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  height: auto;
+}
+
+/* Content Styling */
+.impact-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.impact-content p {
+  font-size: 14px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Impact Stats */
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.impact-box {
+  flex: 1;
+  max-width: 200px;
+  min-width: 150px;
+}
+
+.impact-box h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.impact-box p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.impact-box strong {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* ====== Desktop Large (1200px+) ====== */
+@media (min-width: 1200px) {
+  .impact-section {
+    padding: 35px 30px;
+  }
+  
+  .impact-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .impact-content p {
+    font-size: 16px;
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+  
+  .impact-stats {
+    gap: 50px;
+  }
+  
+  .impact-box {
+    max-width: 220px;
+  }
+  
+  .impact-box h3 {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .impact-box p {
+    font-size: 15px;
+  }
+}
+
+/* ====== Laptop/Desktop (992px - 1199px) ====== */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .impact-section {
+    padding: 30px 25px;
+  }
+  
+  .impact-content h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  
+  .impact-content p {
+    font-size: 15px;
+    max-width: 750px;
+    margin-bottom: 45px;
+  }
+  
+  .impact-stats {
+    gap: 35px;
+  }
+  
+  .impact-box {
+    max-width: 190px;
+  }
+  
+  .impact-box h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  
+  .impact-box p {
+    font-size: 14px;
+  }
+}
+
+/* ====== Tablet (768px - 991px) ====== */
+@media (max-width: 991px) and (min-width: 768px) {
+  .impact-section {
+    padding: 25px 20px;
+  }
+  
+  .impact-content h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .impact-content p {
+    font-size: 13px;
+    max-width: 650px;
+    margin-bottom: 35px;
+  }
+  
+  .impact-stats {
+    gap: 25px;
+  }
+  
+  .impact-box {
+    max-width: 160px;
+    min-width: 140px;
+  }
+  
+  .impact-box h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .impact-box p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* ====== Mobile Large (481px - 767px) ====== */
+@media (max-width: 767px) and (min-width: 481px) {
+  .impact-section {
+    padding: 20px 15px;
+    background-size: contain;
+  }
+  
+  .impact-content h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .impact-content p {
+    font-size: 12px;
+    max-width: 90%;
+    margin-bottom: 25px;
+  }
+  
+  .impact-stats {
+    gap: 15px;
+    flex-wrap: nowrap;
+  }
+  
+  .impact-box {
+    width: calc(25% - 12px);
+    max-width: 120px;
+    min-width: 100px;
+  }
+  
+  .impact-box h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .impact-box p {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  
+  .impact-box strong {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+}
+
+/* ====== Mobile Medium (376px - 480px) ====== */
+@media (max-width: 480px) and (min-width: 376px) {
+  .impact-section {
+    padding: 18px 12px;
+    background-size: contain;
+  }
+  
+  .impact-content h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .impact-content p {
+    font-size: 11px;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  
+  .impact-stats {
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  
+  .impact-box {
+    width: calc(25% - 8px);
+    max-width: 100px;
+    min-width: 85px;
+  }
+  
+  .impact-box h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .impact-box p {
+    font-size: 9px;
+    line-height: 1.2;
+  }
+  
+  .impact-box strong {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+}
+
+/* ====== Mobile Small (320px - 375px) ====== */
+@media (max-width: 375px) and (min-width: 320px) {
+  .impact-section {
+    padding: 15px 8px;
+    background-size: contain;
+  }
+  
+  .impact-content h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .impact-content p {
+    font-size: 10px;
+    max-width: 90%;
+    margin-bottom: 18px;
+    padding: 0 5px;
+  }
+  
+  .impact-stats {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  
+  .impact-box {
+    width: calc(25% - 6px);
+    max-width: 80px;
+    min-width: 70px;
+  }
+  
+  .impact-box h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+  
+  .impact-box p {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  
+  .impact-box strong {
+    font-size: 9px;
+    margin-bottom: 2px;
+  }
+}
+
+/* ====== Mobile Tiny (below 320px) ====== */
+@media (max-width: 319px) {
+  .impact-section {
+    padding: 12px 6px;
+    background-size: contain;
+  }
+  
+  .impact-content h2 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .impact-content p {
+    font-size: 9px;
+    max-width: 90%;
+    margin-bottom: 15px;
+    padding: 0 3px;
+  }
+  
+  .impact-stats {
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+  
+  .impact-box {
+    width: calc(25% - 5px);
+    max-width: 70px;
+    min-width: 60px;
+  }
+  
+  .impact-box h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  
+  .impact-box p {
+    font-size: 7px;
+    line-height: 1.1;
+  }
+  
+  .impact-box strong {
+    font-size: 8px;
+    margin-bottom: 1px;
+  }
+}
+
+/* ====== Landscape Mobile Optimization ====== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .impact-section {
+    padding: 15px 10px;
+    background-size: contain;
+  }
+  
+  .impact-content h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .impact-content p {
+    font-size: 10px;
+    margin-bottom: 15px;
+    max-width: 80%;
+  }
+  
+  .impact-stats {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  
+  .impact-box {
+    width: calc(25% - 6px);
+    max-width: 90px;
+    min-width: 75px;
+  }
+  
+  .impact-box h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+  
+  .impact-box p {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  
+  .impact-box strong {
+    font-size: 9px;
+    margin-bottom: 2px;
+  }
+}
+
+/* ====== Ultra Wide Screens (1400px+) ====== */
+@media (min-width: 1400px) {
+  .impact-section {
+    padding: 40px 40px;
+  }
+  
+  .impact-content h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+  
+  .impact-content p {
+    font-size: 18px;
+    max-width: 900px;
+    margin-bottom: 60px;
+  }
+  
+  .impact-stats {
+    gap: 60px;
+  }
+  
+  .impact-box {
+    max-width: 250px;
+  }
+  
+  .impact-box h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .impact-box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}

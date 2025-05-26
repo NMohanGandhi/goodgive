@@ -1,0 +1,101 @@
+.volunteer-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .banner {
+    background: linear-gradient(135deg, #6b21a8, #4c1d95);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; /* Reduced padding */
+    border-radius: 12px;
+    width: 90%; /* Reduce width to make it smaller */
+    height: 160px; /* Adjust the height */
+    margin: auto; /* Centers the banner */
+}
+
+  
+  .banner-content {
+    max-width: 60%;
+  }
+  
+  .avatars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .avatars img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .avatar-count {
+    background: white;
+    color: #4c1d95;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .register-btn {
+    margin-top: 10px;
+    background-color: #f97316;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: auto; /* Pushes it to the left */
+    display: block; /* Ensures it behaves like a block element */
+    width: fit-content; /* Keeps button width dynamic */
+}
+
+  
+
+  
+  .banner-img {
+    width: 150px;
+    border-radius: 8px;
+  }
+  
+  .faq-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  
+  .faq-container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ddd;
+    padding: 20px;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-answer {
+    margin-top: 8px;
+    color: #555;
+  }
+  
