@@ -7,18 +7,17 @@ import AnandStory from '../assets/AnandStory.png';
 function SuccessStories() {
   const stories = [
     {
-      name: "Asha’s Story",
+      name: "Asha's Story",
       image: AshaStory,
-      quote: "I never thought I’d need help, but when I lost my job and faced eviction, Goodgive provided us with food and connected us to other resources. Thanks to them, we’re starting to rebuild our lives.",
+      quote: "I never thought I'd need help, but when I lost my job and faced eviction, Goodgive provided us with food and connected us to other resources. Thanks to them, we're starting to rebuild our lives.",
     },
     {
-      name: "Pinto’s Story",
+      name: "Pinto's Story",
       image: PintoStory,
       quote: "I lost my job during the pandemic and was struggling to feed my children. Goodgive provided us with nutritious meals every month, which gave me one less thing to worry about. I am so grateful for your support.",
-      highlight: true,
     },
     {
-      name: "Anand’s Story",
+      name: "Anand's Story",
       image: AnandStory,
       quote: "When my father became ill, I had to take time off work to care for him. The food I received from the food bank allowed me to focus on his recovery without the stress of how to feed my family.",
     },
@@ -32,7 +31,7 @@ function SuccessStories() {
       setCurrentIndex((prevIndex) =>
         prevIndex === stories.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [stories.length]);
@@ -65,32 +64,17 @@ function SuccessStories() {
             </svg>
           </button>
 
-          {stories.map((story, index) => {
-            const isVisible = 
-              index === currentIndex || 
-              index === (currentIndex - 1 + stories.length) % stories.length || 
-              index === (currentIndex + 1) % stories.length;
-
-            let position = "";
-            if (index === currentIndex) {
-              position = "active";
-            } else if (index === (currentIndex - 1 + stories.length) % stories.length) {
-              position = "prev";
-            } else if (index === (currentIndex + 1) % stories.length) {
-              position = "next";
-            }
-
-            if (!isVisible) return null;
-
-            return (
-              <div key={index} className={`story-card ${position}`}>
-                <img src={story.image} alt={story.name} className="story-image" />
-                <h3 className="story-name">{story.name}</h3>
-                {position === "active" && <span className="quote-icon">❝</span>}
-                <p className="story-quote">{story.quote}</p>
-              </div>
-            );
-          })}
+          {stories.map((story, index) => (
+            <div 
+              key={index} 
+              className={`story-card ${index === currentIndex ? 'active' : ''}`}
+            >
+              <img src={story.image} alt={story.name} className="story-image" />
+              <h3 className="story-name">{story.name}</h3>
+              {index === currentIndex && <span className="quote-icon">❝</span>}
+              <p className="story-quote">{story.quote}</p>
+            </div>
+          ))}
 
           <button className="nav-button next" onClick={goToNext} aria-label="Next story">
             <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

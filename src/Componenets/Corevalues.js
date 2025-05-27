@@ -1,10 +1,8 @@
 import React from 'react';
-//import './corevalues.css';
 import './Corevalues.css';
 import Compassion from '../assets/Compassion.png';
 import Integrity from '../assets/Integrity.png';
 import Sustainability from '../assets/Sustainability.png';
-
 
 const values = [
   {
@@ -28,9 +26,9 @@ const CoreValues = () => {
   return (
     <section className="core-values-section">
       <div className="cv-header">
-        <h2>Our core values</h2>
+        <h2>Our Core Values</h2>
         <p>
-          Torquem detraxit hosti et quidem se ipsam causam non fuisse torquem detraxit hosti et quidem<br/>
+          Torquem detraxit hosti et quidem se ipsam causam non fuisse torquem detraxit hosti et quidem
           se texit, ne ad respondendum reddidisti voluptates omittantur maiorum dolorum fuga.
         </p>
       </div>
